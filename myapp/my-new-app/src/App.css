@@ -1,0 +1,144 @@
+/* App.css */
+
+/* Set a shiny background for the entire body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: 
+        linear-gradient(135deg, #f0e68b, #f0e68b 50%, #f0c68b 50%, #f0c68b), /* Gradient as the first background */
+        url('tp.JPEG') no-repeat center center/cover; /* Image as the second background */
+    background-size: 400% 400%, cover; /* Gradient size and cover for the image */
+    animation: gradientAnimation 10s ease infinite; /* Add animation to the gradient */
+}
+
+/* Keyframes for shiny effect */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Style the main container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav h1 {
+    display: inline;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+    float: right;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f0c68b; /* Highlight color on hover */
+}
+
+/* General styles for headings and buttons */
+h1, h2, h3 {
+    color: #333;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #f0c68b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0b05f; /* Darker shade on hover */
+}
+
+/* Product List Styles */
+.product-list {
+    margin-top: 20px;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-list th, .product-list td {
+    padding: 15px; /* Increased padding for more space */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-list th {
+    background-color: #f0e68b; /* Header background color */
+}
+
+.product-list td {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for rows */
+}
+
+/* Action Buttons Styles */
+.action-buttons {
+    display: flex;
+    justify-content: space-between; /* Even spacing between buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+.action-buttons button {
+    flex: 1; /* Buttons take equal space */
+    padding: 10px; /* Increased padding for buttons */
+    background-color: #f0c68b; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.action-buttons button:hover {
+    background-color: #e0b05f; /* Darker shade on hover */
+}
+
+/* General Styles for the Product Management Section */
+.product-management {
+    padding: 20px;
+    background-color: #fff; /* Light background for the management section */
+    border-radius: 8px; /* Rounded corners for the section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    .action-buttons {
+        flex-direction: column; /* Stack buttons on smaller screens */
+    }
+}
